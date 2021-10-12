@@ -201,7 +201,7 @@ ax.set_title('Whatsapp usage')
 ax.plot(x, y)
 ax.set_xlabel('Time [hour]')
 ax.set_ylabel('Usage Count');
-
+plt.savefig('whatsapp_usage.pdf') 
 
 
 #temporal usage 
@@ -216,7 +216,7 @@ ax.set_xlabel('Applications')
 ax.set_ylabel('Temporal Usage Count');
 plt.xticks(rotation='vertical')
 ax.set_ylim(0, 2.5)
-
+plt.savefig('temporal_usage2.pdf') 
 
 #plot the DFT after shuffling
 
@@ -268,7 +268,8 @@ ax.set_ylabel('Power')
 ax.set_xlim(0, 0.3)
 
 #the 1800 can be change to adjust the height of te figure depending on the amount of data in the dataset
-ax.set_ylim(0, 1800)
+ax.set_ylim(0, 600)
+plt.savefig('whatsapp_periodogram.pdf') 
 
 #candidate periods
 period_cand = [1/item for item in freq_ind if item > 0.]
